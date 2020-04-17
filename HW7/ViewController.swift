@@ -9,33 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var colorSelected = ""
     
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var finalNameLabel: UILabel!
-    
+    @IBOutlet weak var colorSelectedLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
+        if colorSelected != "" {
+            colorSelectedLabel?.text = colorSelected
+        }else {
+            colorSelectedLabel?.text = "Green selected!"
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? BlueViewController, segue.identifier == "ShowBlue" {
-            vc.userName = nameTextField.text!
+        if let vc = segue.destination as? SecondViewController, segue.identifier == "SecondView" {
+            vc.colorChoice = "Green selected"
             vc.delegate = self
         }
     }
-    @IBAction func showBlueBtn(_ sender: Any) {
+}
+
+extension ViewController: SecondControllerDelegate {
+    func setColor(_ color: String) {
+        colorSelected = color
     }
 }
 
-extension ViewController: BlueControllerDelegate {
-    func setRole(_ role: String) {
-        finalNameLabel.text = "\(nameTextField.text!), \(role)"
-    }
-    
-    
-}
 
