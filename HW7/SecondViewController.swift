@@ -46,7 +46,7 @@ class SecondViewController: UIViewController {
         if segue.identifier == "ShowRed" {
             if let vc1 = segue.destination as? ViewController, segue.identifier == "ShowRed" {
                 vc1.colorSelected = "Red Selected"
-                vc1.self.view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)                
+                vc1.self.view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
             }
         }
     }
@@ -57,8 +57,8 @@ class SecondViewController: UIViewController {
   
     @IBAction func blueSelectedBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "ShowBlue", sender: nil)
-                
     }
+    
     @IBAction func redSelectedBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "ShowRed", sender: nil)
     }

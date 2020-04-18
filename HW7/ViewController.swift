@@ -30,8 +30,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
-
-
-
-

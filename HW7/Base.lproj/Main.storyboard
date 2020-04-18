@@ -134,6 +134,111 @@
             </objects>
             <point key="canvasLocation" x="4105.7971014492759" y="-649.55357142857144"/>
         </scene>
+        <!--Three-->
+        <scene sceneID="0yI-BF-VUM">
+            <objects>
+                <viewController id="ydj-2H-pmn" customClass="ThirdViewController" customModule="HW7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zob-BL-qWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKT-r8-Me0">
+                                <rect key="frame" x="20" y="480" width="374" height="310"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="v9h-HH-p1y" kind="embed" identifier="EmbedSecond" id="Zrd-q5-9VV"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9d-eS-fFC">
+                                <rect key="frame" x="159" y="116" width="101" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Green color">
+                                    <color key="titleColor" red="0.058299011499999998" green="1" blue="0.01099159527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="greenColorBtn:" destination="ydj-2H-pmn" eventType="touchUpInside" id="0UL-7W-l9Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqp-mh-mt4">
+                                <rect key="frame" x="168" y="174" width="87" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Blue color"/>
+                                <connections>
+                                    <action selector="blueColorBtn:" destination="ydj-2H-pmn" eventType="touchUpInside" id="Rag-u8-aR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlV-Ue-MbA">
+                                <rect key="frame" x="172" y="242" width="83" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Red color">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="redColorBtn:" destination="ydj-2H-pmn" eventType="touchUpInside" id="Owx-5s-3rx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ExE-p8-ET8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Three" id="UBi-gw-dmE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6A6-Yu-vot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4105.7971014492759" y="44.866071428571423"/>
+        </scene>
+        <!--Four View Controller-->
+        <scene sceneID="Pwo-OM-Zli">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="v9h-HH-p1y" customClass="FourViewController" customModule="HW7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yno-cv-evh">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="310"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tal-v0-bT8">
+                                <rect key="frame" x="137" y="44" width="101" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Green color">
+                                    <color key="titleColor" red="0.058299011499999998" green="1" blue="0.01099159527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="greenColorBtn:" destination="v9h-HH-p1y" eventType="touchUpInside" id="gU9-y2-uvT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPH-fP-C0j">
+                                <rect key="frame" x="144" y="88" width="87" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Blue color"/>
+                                <connections>
+                                    <action selector="blueColorBtn:" destination="v9h-HH-p1y" eventType="touchUpInside" id="LWI-eH-dOu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qe-6e-Nfg">
+                                <rect key="frame" x="146" y="132" width="83" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Red color">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="redColorBtn:" destination="v9h-HH-p1y" eventType="touchUpInside" id="TGE-zj-OYE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TPl-IV-snh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1cp-D1-Bja"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPu-uh-R1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4887" y="45"/>
+        </scene>
         <!--Second View Controller-->
         <scene sceneID="iXR-1H-a0A">
             <objects>
@@ -227,6 +332,7 @@
                     <connections>
                         <segue destination="jFY-Mx-lNs" kind="relationship" relationship="viewControllers" id="90i-iR-whF"/>
                         <segue destination="Xhg-Hp-Jag" kind="relationship" relationship="viewControllers" id="hn2-Q0-6gy"/>
+                        <segue destination="ydj-2H-pmn" kind="relationship" relationship="viewControllers" id="NLi-E1-U1v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-GA-kaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
