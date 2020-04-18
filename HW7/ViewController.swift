@@ -11,31 +11,27 @@ import UIKit
 class ViewController: UIViewController {
     var colorSelected = ""
     
-    @IBOutlet weak var colorSelectedLabel: UILabel?
+    @IBOutlet weak var colorSelectedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        if colorSelected != "" {
-            colorSelectedLabel?.text = colorSelected
+        
+        if colorSelected == "" {
+            colorSelectedLabel?.text = "No color selected yet"
         }else {
-            colorSelectedLabel?.text = "Green selected!"
+            colorSelectedLabel?.text = colorSelected
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SecondViewController, segue.identifier == "SecondView" {
-            vc.colorChoice = "Green selected"
-            vc.delegate = self
+            vc.colorChoice = colorSelectedLabel.text!
         }
     }
 }
 
-extension ViewController: SecondControllerDelegate {
-    func setColor(_ color: String) {
-        colorSelected = color
-    }
-}
+
+
 
 

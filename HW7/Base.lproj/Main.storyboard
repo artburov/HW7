@@ -95,34 +95,34 @@
         <!--Blue-->
         <scene sceneID="f2R-Vp-3pH">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Xhg-Hp-Jag" customClass="ViewController" customModule="HW7" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstController" modalPresentationStyle="fullScreen" id="Xhg-Hp-Jag" customClass="ViewController" customModule="HW7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="BlueController" id="AkE-ZN-ddg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgj-Wq-zAq">
-                                <rect key="frame" x="164" y="427" width="86" height="42"/>
+                                <rect key="frame" x="135" y="427" width="145" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Change">
+                                <state key="normal" title="Change color">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="NOp-jz-uB9" kind="show" identifier="SecondView" id="OvM-Ne-ikQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmQ-N5-vhl">
-                                <rect key="frame" x="32" y="242" width="350" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmQ-N5-vhl">
+                                <rect key="frame" x="32" y="271" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <viewLayoutGuide key="safeArea" id="hgS-Bf-L4u"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1H2-pH-t9q"/>
+                    <tabBarItem key="tabBarItem" title="Two" id="1H2-pH-t9q"/>
                     <navigationItem key="navigationItem" title="Blue" id="VLV-FV-H9V" userLabel="Blue">
                         <barButtonItem key="backBarButtonItem" title="Home" id="mCN-WS-7Xw"/>
                     </navigationItem>
@@ -142,12 +142,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="None" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-jZ-s5p">
-                                <rect key="frame" x="139" y="373" width="146" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nY-Fv-foW">
                                 <rect key="frame" x="158" y="458" width="112" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,8 +150,7 @@
                                     <color key="titleColor" red="0.058299011499999998" green="1" blue="0.01099159527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectedGreenBtn:" destination="NOp-jz-uB9" eventType="touchUpInside" id="wRV-gr-yim"/>
-                                    <segue destination="Xhg-Hp-Jag" kind="show" id="UnL-BX-sbJ"/>
+                                    <action selector="greenSelectedBtn:" destination="NOp-jz-uB9" eventType="touchUpInside" id="05C-Mf-0Uh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PE-He-jeO">
@@ -165,15 +158,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Select Blue"/>
+                                <connections>
+                                    <action selector="blueSelectedBtn:" destination="NOp-jz-uB9" eventType="touchUpInside" id="gxv-t2-cNN"/>
+                                    <segue destination="Xhg-Hp-Jag" kind="show" identifier="ShowBlue" id="OJn-f1-Lt0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6i-RI-iQs">
-                                <rect key="frame" x="165" y="572" width="94" height="36"/>
+                                <rect key="frame" x="167" y="558" width="94" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Select Red">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="redSelectedBtn:" destination="NOp-jz-uB9" eventType="touchUpInside" id="ptt-LU-BIp"/>
+                                    <segue destination="Xhg-Hp-Jag" kind="show" identifier="ShowRed" id="VS7-0n-BQw"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="None" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-jZ-s5p">
+                                <rect key="frame" x="110" y="374" width="208" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3kz-Bp-Qxf"/>
@@ -181,6 +188,7 @@
                     <navigationItem key="navigationItem" id="n4A-Gq-S9W"/>
                     <connections>
                         <outlet property="colorChoiceTextField" destination="G1d-jZ-s5p" id="cNd-RU-RCz"/>
+                        <segue destination="Xhg-Hp-Jag" kind="show" identifier="ShowGreen" id="XyK-bF-NjN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iu-c4-unN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,8 +235,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OvM-Ne-ikQ"/>
-        <segue reference="UnL-BX-sbJ"/>
+        <segue reference="hn2-Q0-6gy"/>
         <segue reference="Xsg-XE-3GR"/>
     </inferredMetricsTieBreakers>
 </document>
