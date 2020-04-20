@@ -9,24 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var colorSelected = ""
     
-    @IBOutlet weak var colorSelectedLabel: UILabel!
+    @IBOutlet weak var colorInfoLabel: UILabel!
+       
+    var selectedColor: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        if colorSelected == "" {
-            colorSelectedLabel?.text = "No color selected yet"
-        }else {
-            colorSelectedLabel?.text = colorSelected
-        }
+           
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SecondViewController, segue.identifier == "SecondView" {
-            vc.colorChoice = colorSelectedLabel.text!
+        if let vc = segue.destination as? SecondViewController, segue.identifier == "sendDataToSecondVC" {
+            vc.setColor = selectedColor ?? "Select color below"
+            vc.delegate = self
         }
+    }
+}
+
+extension ViewController: BlueControllerDelegate {
+    func bgColor(_ color: UIColor) {
+        self.view.backgroundColor = color
+    }
+    
+    func textColor(_ text: String) {
+        selectedColor = text
+        colorInfoLabel.text = "\(text)"
     }
 }
